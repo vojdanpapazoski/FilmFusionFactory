@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Contrail+One&family=Creepster&family=Montserrat&family=Quicksand&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Contrail+One&family=Creepster&family=Manrope&family=Montserrat&family=Quicksand&display=swap');
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-roboto: "Quicksand", serif;
+  --font-raleway: "Manrope", sans-serif;
+}
+
+body, html {
+  font-family: var(--font-raleway);
+  background: url(https://cdn.svgator.com/images/2022/06/use-svg-as-background-image-particle-strokes.svg);
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.app {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 0px;
+  padding-top: 3em;
+  min-height: 100%;
+}
+
+h1 {
+  font-size: 2.3;
+  letter-spacing: 1px;
+  width: fit-content;
+  color: #f0f0f0;
+  transition: all 0.3s;
+  position: relative;
+}
+
+h1::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: #3a4753;
+  border-bottom-color: #3a4753;
+  transform: scale(0.1, 1);
+}
+
+h1:hover::before {
+  opacity: 1; 
+  transform: scale(1, 1); 
+}
+
+.threeF {
+  color: #6a87a3;
+  -webkit-box-shadow: 5px 5px 9px #3a4753, -4px -5px 7px #414b52;
+  box-shadow: 2px 3px 4px #4c6780, -5px -5px 7px #414b52;
+  font-size: 1.2em;
+}
+
+.search {
+  width: 71%;
+  margin: 4rem 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 1rem 1.75rem;
+  border-radius: 3rem;
+  background: #6a87a3;
+  -webkit-box-shadow: 5px 5px 7px #4c6780, -5px -5px 7px #414b52;
+  box-shadow: 2px 3px 4px #4c6780, -5px -5px 7px #414b52;
+}
+
+.search input {
+  flex: 1;
+  border: none;
+  font-size: 1.2rem;
+  font-family: var(--font-s);
+  font-weight: 500;
+  padding-right: 1rem;
+  outline: none;
+  color: #ffffff;
+  background:#6a87a3;
+}
+
+.search img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.search button {
+  padding: 20px 40px;
+  border-radius: 0.5rem;
+  margin-left: 15px;
+  color: #a1a1a1;
+  font-family: var(--font-raleway);
+  font-weight: 900;
+  letter-spacing: 0.75px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  background: #1f2123;
+  -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+  box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+}
+
+.empty {
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty h2 {
+  font-size: 1rem;
+  color:  #f0f0f0;
+  font-family: var(--font-roboto);
+}
+
+.container {
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.movie {
+  width: 190px;
+  height: 300px;
+  margin: 1.5rem;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  border: none;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+  box-shadow: 0px 13px 10px -7px rgba(160, 160, 160, 0.1);
+}
+
+.movie div:nth-of-type(1) {
+  position: absolute;
+  padding: 16px;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+  color:  #f0f0f0;
+}
+
+.movie:hover {
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05, 1.05);
+  cursor: pointer;
+}
+
+.movie div:nth-of-type(2) {
+  width: 100%;
+  height: 100%;
+}
+
+.movie div:nth-of-type(2) img {
+  height: 100%;
+  width: 100%;
+}
+
+.movie div:nth-of-type(3) {
+  z-index: 2;
+  background-color: #343739d3;
+  padding: 16px 24px 24px 24px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.movie div:nth-of-type(3) span {
+  font-family: "Quicksand", sans-serif;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #f0f0f0;
+}
+
+.movie div:nth-of-type(3) h3 {
+  margin-top: 5px;
+  font-family: "Manrope", serif;
+  color: #e2e2e2;
+}
+
+.movie:hover div:nth-of-type(2) {
+  height: 100%;
+  opacity: 0.3;
+}
+
+.movie:hover div:nth-of-type(3) {
+  background-color: transparent;
+}
+
+.movie:hover div:nth-of-type(1) {
+  opacity: 1;
+}
+
+.previous-button {
+  cursor: pointer;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: "Quicksand", sans-serif;
+  font-size: 10pt;
+  width: 100px;
+  height: 45px;
+  margin-right: 1.5em;
+  position: relative;
+  border: solid #64798d 2px;
+  color: #777;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+  border-radius: 5px;
+  background: transparent;
+}
+
+.previous-button:before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #6a87a3;
+  transition: 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.previous-button:hover:before {
+  width: 100%;
+}
+
+.previous-button:hover {
+  color: #f1f1f1;
+  border-color: #8e9faf;
+}
+
+.previous-button:active:before {
+  background-color: #00a7fc;
+}
+
+.previous-button:active {
+  border-color: #00a7fc;
+  background-color: #00a7fc;
+  color: #333;
+}
+
+.previous-button:focus {
+  outline: none
+}
+
+.next-button {
+  cursor: pointer;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: "Quicksand", sans-serif;
+  font-size: 10pt;
+  width: 100px;
+  height: 45px;
+  margin-left: 1.5em;
+  position: relative;
+  border: solid #64798d 2px;
+  color: #777;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+  border-radius: 5px;
+  background: transparent;
+}
+
+.next-button:before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #6a87a3;
+  transition: 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.next-button:hover:before {
+  width: 100%;
+}
+
+.next-button:hover {
+  color: #f1f1f1;
+  border-color: #8e9faf;
+}
+
+.next-button:active:before {
+  background-color: #00a7fc;
+}
+
+.next-button:active {
+  border-color: #00a7fc;
+  background-color: #00a7fc;
+  color: #333;
+}
+
+.next-button:focus {
+  outline: none
+}
+
+
+
+
+
+
+
+
+

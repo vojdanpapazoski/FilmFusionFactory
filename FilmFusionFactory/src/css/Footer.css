@@ -1,0 +1,65 @@
+.footer {
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #222527;
+  width: 100%;
+  margin-top: 1600px;
+  overflow: hidden;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #222527;
+  width: 100%;
+  padding-top: 0.5em;
+}
+
+.footer div {
+  flex: 1;
+}
+
+.contact, .info, .awards {
+  padding: 35px 20px 35px 10px;
+  font-size: 0.8em;
+  color: white;
+}
+
+.bronze, .medal {
+  display: flex;
+  align-items: center;
+}
+
+img {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 355px),
+       (max-width: 430px),
+       (max-width: 539px),
+       (max-width: 713px) {
+  .footer {
+    margin-top: 1200px;
+    font-size: 0.5em;
+  }
+  .movie {
+    width: 130px;
+    height: 210px;
+  }
+}
+
+@media screen and (max-width: 951px) {
+  .footer {
+    margin-top: 1900px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .footer-content {
+    font-size: 0.8em;
+    margin-top: 0px;
+  }
+}
